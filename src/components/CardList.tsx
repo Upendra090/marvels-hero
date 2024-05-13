@@ -51,8 +51,8 @@ export default function CardList() {
           <span>Loading...</span>
         ) : (
           data &&
-          data?.characters?.map((character: any) => (
-            <Article character={character} />
+          data?.characters?.map((character: any, index: number) => (
+            <Article key={index} character={character} />
           ))
         )}
       </div>
